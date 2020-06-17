@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      
+      .rating {
+        background-color: rosybrown;
+        /* unicode-bidi: bidi-override; */
+        /*为什么一定要 bidi-override*/
+        unicode-bidi: normal;
+        direction: rtl;
+        
+        font-size: 50px;
+      }
+      .rating > span {
+        display: inline-block;
+        position: relative;
+        width: 1.1em;
+      }
+
+      /*在hover到的，以及之后的，ele上盖上一个金色的五角星；同时把本来的空心五角星透明掉*/
+      .rating > span:hover, 
+      .rating > span:hover ~ span {
+        color: transparent;
+      }
+
+      /*选中两类：1.hover到的空心五角星 2.它之后的空心五角星*/
+      .rating > span:hover:before,
+      .rating > span:hover ~ span:before {
+        /*实心五角星*/
+        content: "\2605";
+        /*覆盖到空心五角星*/
+        position: absolute;
+        left: 0px;
+        color: gold;
+      }
+
+      body {
+        padding: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rating">
+      <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+    </div>
+  </body>
+</html>

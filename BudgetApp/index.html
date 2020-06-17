@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Camera API</title>
+        
+        <style>
+            .container {
+                width: 50%;
+                
+            }
+            .stars-outer {
+                position:relative;
+                display: inline-block;
+            }
+            .stars-inner {
+                position:absolute;
+                top:0;
+                left:0;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 0;
+            }
+
+            .stars-outer::before {
+                content: "\f005 \f005 \f005 \f005 \f005";
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                color: #ccc;
+            
+            }
+
+            .stars-inner::before {
+                content: "\f005 \f005 \f005 \f005 \f005";
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                color: #f8ce0b;
+            }
+
+
+
+            
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <i class="fas fa-clock"></i>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>4K Television</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="sony">
+                        <td>Sony 4K</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner">
+
+                                </div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+
+                    <tr class="xiaomi">
+                        <td>小米 4K</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner">
+                                </div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+
+                    <tr class="samsung">
+                        <td>Samsung 4K</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner">
+
+                                </div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+        </div>
+        
+        
+        
+        
+        
+        
+        <div class="stars">
+            <!-- <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i> -->
+            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+        </div>
+        
+                            
+
+        
+        <script>
+            const ratings = {
+                sony: 4.7,
+                xiaomi: 5.0,
+                samsung: 1.0,
+            }
+            const roundedPer = {
+                sony: '90%',
+                xiaomi: '70%',
+                samsung: '20%',
+            }
+
+            const starsTotal = 5;
+
+            // document.addEventListener('DOMContentLoaded', getRating)
+
+            // function getRating() {
+            //     for (let rating in ratings) {
+            //         const points = (ratings[rating]/starsTotal) * 100;  
+            //         const roundedPer = `${Math.round(points / 10) * 10}%` ;
+                    
+            //         //document.querySelector(`.${rating}.stars-inner`).style.width = roundedPer;
+
+            //     }
+            // }
+
+        </script>
+
+
+    </body>
+</html>
